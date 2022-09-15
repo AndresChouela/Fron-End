@@ -1,10 +1,44 @@
 *{
     font-size: 20px;
+    font-family: sans-serif;
 }
 
+.container{
+    padding: 20px 5px;
+    background-color: blueviolet;
+    height: 100vh;
+}
 
+.caja{
+    background: #4fc;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    position: relative;
+    animation-name: desplazarse;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.88,1.56,.17,-0.66);
+}
 
-.cont{
+.caja2{
+    background: #d33;
+    height: 80px;
+    width: 80px;
+}
+
+@keyframes desplazarse{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 80%;
+    }
+}
+
+/*.cont{
     background: gray;
     margin: auto;
     margin-top: 50px;
@@ -57,8 +91,7 @@ button:hover{
     margin-bottom: 400px;
     height: 250px;
     width: 250px;
-    outline: 4px solid blue;
-    /*transform: rotate(-30deg) skew(25deg);*/
+    transform: rotate(-30deg) skew(25deg);
 }
 
 .efecto_imagen img{
@@ -66,15 +99,16 @@ button:hover{
     height: 250px;
     position: absolute;
     transition: 1s;
+    outline: 4px solid blue;
 }
 
 .efecto_imagen:hover .imagen1{
-    transform: translate(-40px, 40px);
+    transform: translate(-20px, 20px);
     opacity: .2;
 }
 
 .efecto_imagen:hover .imagen2{
-    transform: translate(-20px, 20px);
+    transform: translate(0px, 0px);
     opacity: .5;
 }
 
